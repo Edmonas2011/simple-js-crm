@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://cdnjs.cloudflare.com; script-src 'self' https://cdnjs.cloudflare.com; font-src https://cdnjs.cloudflare.com">
+  <title>Simple CRM</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Simple CRM System</h1>
+      <p>Manage your clients with ease</p>
+    </div>
+
+    <div class="search-section">
+      <input type="text" id="searchInput" class="search-control" placeholder="Search clients...">
+      <select id="sortSelect" class="sort-control">
+        <option value="default">Sort by default</option>
+        <option value="name">Sort by name</option>
+        <option value="dateAdded">Sort by date added</option>
+      </select>
+    </div>
+
+    <div class="form-section">
+      <form id="clientForm" onsubmit="return false;">
+        <div class="form-group">
+          <label for="clientName">Client Name</label>
+          <input type="text" id="clientName" class="form-control" placeholder="Enter client name" maxlength="50" autocomplete="off"/>
+          <div id="nameError" class="error-message">Please enter a valid name (2-50 characters, letters only)</div>
+        </div>
+
+        <div class="form-group">
+          <label for="clientEmail">Email Address</label>
+          <input type="email" id="clientEmail" class="form-control" placeholder="Enter client email" autocomplete="off"/>
+          <div id="emailError" class="error-message">Please enter a valid email address</div>
+        </div>
+
+        <div class="form-group">
+          <label for="clientPhone">Phone Number</label>
+          <input type="tel" id="clientPhone" class="form-control" placeholder="Enter phone number (e.g. +1234567890)" autocomplete="off"/>
+          <div id="phoneError" class="error-message">Please enter a valid phone number (7-15 digits)</div>
+        </div>
+
+        <div class="form-group">
+          <label for="clientNotes">Notes</label>
+          <textarea id="clientNotes" class="form-control" placeholder="Additional information about the client" rows="3"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="clientStatus">Status</label>
+          <select id="clientStatus" class="form-control">
+            <option value="active">Active</option>
+            <option value="lead">Lead</option>
+            <option value="inactive">Inactive</option>
+          </select>
+        </div>
+
+        <div class="button-group">
+          <button type="button" id="addClientBtn" class="btn btn-primary">
+            <span>Add Client</span>
+          </button>
+          <button type="button" id="clearFormBtn" class="btn btn-secondary">
+            <span>Clear Form</span>
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <div class="client-list">
+      <h2>Client List</h2>
+      <div class="list-header">
+        <div id="clientCount" class="client-count">0 clients</div>
+        <button id="exportBtn" class="btn btn-export">Export Data</button>
+      </div>
+      <ul id="clientsList"></ul>
+      <div id="emptyList" class="empty-list">No clients added yet.</div>
+    </div>
+  </div>
+
+  <div id="clientModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2>Edit Client</h2>
+      <form id="editClientForm">
+        <div class="form-group">
+          <label for="editClientName">Client Name</label>
+          <input type="text" id="editClientName" class="form-control" maxlength="50">
+          <div id="editNameError" class="error-message">Please enter a valid name</div>
+        </div>
+        <div class="form-group">
+          <label for="editClientEmail">Email Address</label>
+          <input type="email" id="editClientEmail" class="form-control">
+          <div id="editEmailError" class="error-message">Please enter a valid email</div>
+        </div>
+        <div class="form-group">
+          <label for="editClientPhone">Phone Number</label>
+          <input type="tel" id="editClientPhone" class="form-control">
+          <div id="editPhoneError" class="error-message">Please enter a valid phone</div>
+        </div>
+        <div class="form-group">
+          <label for="editClientNotes">Notes</label>
+          <textarea id="editClientNotes" class="form-control" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="editClientStatus">Status</label>
+          <select id="editClientStatus" class="form-control">
+            <option value="active">Active</option>
+            <option value="lead">Lead</option>
+            <option value="inactive">Inactive</option>
+          </select>
+        </div>
+        <button type="button" id="saveClientBtn" class="btn btn-primary">Save Changes</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="social-links">
+      <a href="https://www.instagram.com/111_.ase7aann/" target="_blank" class="social-link">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://t.me/edmonaseyann" target="_blank" class="social-link">
+        <i class="fab fa-telegram"></i>
+      </a>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
