@@ -6,7 +6,9 @@ A lightweight, browser-based CRM (Customer Relationship Management) application 
 
 This application allows users to add, view, edit, delete, search, and sort client records. It's designed to be a simple tool for individuals or small teams who need a basic way to keep track of client interactions and details without requiring a backend server or database. All data is stored locally in the user's browser.
 
-You can add more plain text here to describe your project in greater detail, perhaps discussing your motivations for building it or specific use cases you envisioned.
+## 🌐 Live Demo
+
+Check out the live application here: [https://simple-js-crm.vercel.app](https://simple-js-crm.vercel.app)
 
 ## ✨ Features
 
@@ -79,6 +81,21 @@ Feel free to reach out if you have any questions or suggestions!
 *   **GitHub:** Edmonas2011
 *   **Telegram:** edmonaseyann
 *   **Instagram:** 111_.ase7aann
+
+## ⭐ Show Your Support
+
+If you find this project helpful or interesting, please consider giving it a star on GitHub! Your support is greatly appreciated.
+
+---
+
+## 🤝 Contributing
+
+Feel free to contribute to this project by submitting issues or pull requests! We appreciate your help in making this project better.
+
+## 📜 License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
+
 
 ---
 
